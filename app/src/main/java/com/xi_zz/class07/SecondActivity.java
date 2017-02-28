@@ -18,9 +18,11 @@ public class SecondActivity extends AppCompatActivity {
 
 		Intent intent = getIntent();
 
-		String message = intent.getStringExtra(Keys.STRING);
-		int num = intent.getIntExtra(Keys.NUM, 0);
+//		String message = intent.getStringExtra(Keys.STRING);
+//		int num = intent.getIntExtra(Keys.NUM, 0);
 
-		displayText.setText(message + " " + num);
+		Person p = (Person) intent.getSerializableExtra(Keys.PERSON);
+//		displayText.setText(p.getName() + " " + p.getAge());
+		displayText.setText(p.toString());
 	}
 }

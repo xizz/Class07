@@ -16,8 +16,11 @@ public class MainActivity extends AppCompatActivity {
 	public void launchActivity(View view) {
 		Intent intent = new Intent(this, SecondActivity.class);
 
-		intent.putExtra(Keys.STRING, "Hello~~~~~~~~~");
-		intent.putExtra(Keys.NUM, 100);
+		Person xi = new Person("Xi", 100);
+
+//		intent.putExtra(Keys.STRING, "Hello~~~~~~~~~");
+//		intent.putExtra(Keys.NUM, 100);
+		intent.putExtra(Keys.PERSON, xi);
 
 		startActivity(intent);
 	}
